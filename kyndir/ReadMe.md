@@ -29,4 +29,4 @@
     8. When all dependencies are installed, export the env to yml file for future use in other machines.<br>
         `conda env export > kyndir/environment.yml`
 4. Share/recreate env in other machines<br>
-   `conda create -f kyndir/environment.yml`
+   `conda env create -f kyndir/environment.yml`
