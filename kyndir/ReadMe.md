@@ -21,5 +21,8 @@
         `conda deactivate`
 5. Install tortoise-tts and dependencies.<br>
     1. git clone `tortoise-tts` repository
-    2. cd to the cloned `tortoise-tts` dir and run `python setup.py install`
-    3. use pip install missing packages if any
+    2. cd to the cloned `tortoise-tts` dir and run `pip3 install -r requirements.txt`
+    3. run `python setup.py install`
+    4. use pip install missing packages if any.
+6. Test tts to install other missing dependencies.
+    `python tortoise/do_tts.py --text "I'm going to speak this" --voice random --preset fast`
