@@ -12,17 +12,16 @@
 2. Install CUDA
 3. Install [PyTorch](https://pytorch.org/get-started/locally/)
    ![pytorch_install](pics/pytorch_install.png)
-4. Create Virtual Enviroment with conda<br>
-    1. create env<br>
-        `conda create --name {cutom_env_name} {a starting package name or just type in pip/python}`
+4. Git clone tortoise-tts repository <br>
+5. Prep Conda Env<br>
+    1. create env with default python as the starting point.<br>
+        `conda create -n TorToiSe python`
     2. activate env<br>
         `conda activate {cutom_env_name}`
-    3. deactivate env<br>
-        `conda deactivate`
-5. Install tortoise-tts and dependencies.<br>
-    1. git clone `tortoise-tts` repository
-    2. cd to the cloned `tortoise-tts` dir and run `pip3 install -r requirements.txt`
-    3. run `python setup.py install`
-    4. use pip install missing packages if any.
-6. Test tts to install other missing dependencies.
+    3. run `pip3 install -r requirements.txt` to install dependencies.
+    4. Do NOT run `python setup.py install`, as this would install tortoise as a global module in your machine which might not be what you want.
+    5. Use pip install missing packages if any during the normal usage.
+    6. While in env, test out tts to install other missing dependencies.
     `python tortoise/do_tts.py --text "I'm going to speak this" --voice random --preset fast`
+    7. When all dependencies are installed, export the env to yml file for future use in other machines.<br>
+        `conda env export > environment.yml`
