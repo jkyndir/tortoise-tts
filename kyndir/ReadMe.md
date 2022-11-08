@@ -36,3 +36,8 @@ One can either manually setup the env or recreate the env from the yml file with
         Note that some redundant pip package install requirements are manaully removed and only essential ones are kept in the yml file, so that pip subprocess error can be avoided in the conda env creation from the yml file.
 - Recreate Env from the yml file<br>
    `conda env create -f kyndir/environment.yml`
+
+# To-Do-List
+
+- [ ] add feature to merge multiple voices
+- [ ] add feature to process long text
