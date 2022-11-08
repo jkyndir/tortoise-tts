@@ -26,5 +26,7 @@
     7. While in env, test out tts to install other missing dependencies.<br>
     `python -m tortoise.do_tts --text "I'm going to speak this" --voice random --preset fast`<br>
     Note that one should run these files as modules in the root of this repository so that it will be used as one of the sys.path when python searches modules for imports.
-    1. When all dependencies are installed, export the env to yml file for future use in other machines.<br>
-        `conda env export > environment.yml`
+    8. When all dependencies are installed, export the env to yml file for future use in other machines.<br>
+        `conda env export > kyndir/environment.yml`
+4. Share/recreate env in other machines<br>
+   `conda create -f kyndir/environment.yml`
