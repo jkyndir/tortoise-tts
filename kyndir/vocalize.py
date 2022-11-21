@@ -49,6 +49,10 @@ def vocalize_txt(tts, txt_2b_voiced, voice_name, preset_mode, o_audio_flnm, extr
                               preset=preset_mode)
     torchaudio.save(o_audio_flnm, gen.squeeze(0).cpu(), 24000)
 
+    # run system cmd to launch the file.
+    run_audio_cmd = f"start {o_audio_flnm}"
+    os.system(run_audio_cmd)
+
 
 # Main Action ----------------------------------------------------------------------------------------------------------
 def main():
